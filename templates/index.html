@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP4 Encryption and Decryption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>MP4 Encryption and Decryption</h1>
+
+    <h2>Encrypt an MP4 File</h2>
+    <form action="/encrypt" method="POST" enctype="multipart/form-data">
+        <input type="file" name="mp4_file">
+        <input type="submit" value="Encrypt">
+    </form>
+
+    <h2>Decrypt an Encrypted File</h2>
+    <form action="/decrypt" method="POST" enctype="multipart/form-data">
+        <input type="file" name="encrypted_file">
+        <input type="submit" value="Decrypt">
+    </form>
+
+    <p><a href="/download/encrypted">Download Encrypted File</a></p>
+    <p><a href="/download/decrypted">Download Decrypted File</a></p>
+</body>
+</html>
+ 
